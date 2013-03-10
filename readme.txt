@@ -14,7 +14,7 @@ A complete solution for WordPress Scheduled Post. Get an admin Bar & Dashboard W
 
 [WPDeveloper.net](http://wpdeveloper.net/) brings 'WP Scheduled Posts' for all WordPress user for free, which was previously only used by [ARCom](http://arcom.com.bd) internally, in multi-author projects like [The Tech Journal](http://thetechjournal.com).
 
-'WP Scheduled Post' is a very simple but super useful plugin. It will enable a widget in dashboard or in admin bar which will show all future Scheduled post. This is specially useful for multi-author blog. Even its useful for single author blog who use the built-in Schedule function of WordPress. 
+'WP Scheduled Posts' is a very simple but super useful plugin. It will enable a widget in dashboard or in admin bar which will show all future Scheduled post. This is specially useful for multi-author blog. Even its useful for single author blog who use the built-in Schedule function of WordPress. 
 
 To better understand what it does and how it works please check screenshot section.
 
