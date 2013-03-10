@@ -1,5 +1,5 @@
 === WP Scheduled Posts ===
-Contributors: onetarek, asif2bd
+Contributors: onetarek, Asif2BD
 Donate link: http://wordpressfoundation.org/donate/
 Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget
 Requires at least: 2.5.0
