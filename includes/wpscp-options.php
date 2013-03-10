@@ -68,20 +68,21 @@ function wpscp_options_page()
 	
 	
 	echo "<div style=\"width: 1010px; padding-left: 10px;\" class=\"wrap\">";
-		echo "<div style=\"width: 800px; float:left;\">";
+		echo "<div style=\"width: 700px; float:left;\">";
+		echo '<div id="icon-options-general" class="icon32"></div>';
 		echo "<h2>WP Scheduled Posts Options</h2>";
 		global $current_user;
 		?>
 			<form action="" method="post">
             <table class="form-table">
-            <tr><td width="280" align="right">Show Scheduled Posts in Dashboard Widget</td><td><input type="checkbox" name="show_dashboard_widget" value="1" <?php echo ($wpscp_options['show_dashboard_widget'])?' checked="checked"': '';?> /></td></tr>
-            <tr><td align="right">Show Scheduled Posts in Site Front-end Admin Bar</td><td><input type="checkbox" name="show_in_front_end_adminbar" value="1" <?php echo ($wpscp_options['show_in_front_end_adminbar'])?' checked="checked"': '';?>/></td></tr>
-            <tr><td align="right">Show Scheduled Posts in Admin Bar</td><td><input type="checkbox" name="show_in_adminbar" value="1" <?php echo ($wpscp_options['show_in_adminbar'])?' checked="checked"': '';?>/></td></tr>
+            <tr><td  colspan="2" align="left"><input type="checkbox" name="show_dashboard_widget" value="1" <?php echo ($wpscp_options['show_dashboard_widget'])?' checked="checked"': '';?> />&nbsp;&nbsp;Show Scheduled Posts in Dashboard Widget</td></tr>
+            <tr><td  colspan="2" align="left"><input type="checkbox" name="show_in_front_end_adminbar" value="1" <?php echo ($wpscp_options['show_in_front_end_adminbar'])?' checked="checked"': '';?>/>&nbsp; &nbsp;Show Scheduled Posts in Sitewide Admin Bar</td></tr>
+            <tr><td  colspan="2" align="left"><input type="checkbox" name="show_in_adminbar" value="1" <?php echo ($wpscp_options['show_in_adminbar'])?' checked="checked"': '';?>/>&nbsp;&nbsp;Show Scheduled Posts in Admin Bar</td></tr>
 
 			<tr>
-            <td scope="row" style="text-align:right; vertical-align:top;">Show Post Types: </td>
+            <td scope="row" align="left" style="vertical-align:top;">Show Post Types: </td>
             <td>
-            <select name="allow_post_types[]" MULTIPLE style="height:70px;width:300px;">
+            <select name="allow_post_types[]" MULTIPLE style="height:70px;width:150px;">
 			<?php
 			$typeswehave = array('post,revision'); //oneTarek
 			$post_types=get_post_types('','names'); 
@@ -100,17 +101,19 @@ function wpscp_options_page()
             </tr>
             
             <tr valign="top">
-            <td scope="row" align="right"><label for="allow_user_role"><?php echo 'Allow users' ; ?></label></td>
+            <td width="100" scope="row" align="align="left""><label for="allow_user_role">Allow users:</label></td>
             <td>
-            <select name="allow_user_role[]" id="allow_user_role" multiple="multiple"  style="height:100px;width:300px;" ><?php  wpscp_dropdown_roles( $wpscp_options['allow_user_role'] ); ?></select>
+            <select name="allow_user_role[]" id="allow_user_role" multiple="multiple"  style="height:100px;width:150px;" ><?php  wpscp_dropdown_roles( $wpscp_options['allow_user_role'] ); ?></select>
             </td>
             </tr>  
                         
             <tr><td><input type="submit" name="save_options" value="Save Options" class='button-primary'/></td><td>&nbsp;</td></tr>
             </table>
             </form>
+            
+            <div style=" text-align:center; margin-top:60px;"><a target="_blank" href="http://wpdeveloper.net"><img src="<?php echo WPSCP_PLUGIN_URL."/includes/wpdevlogo.png" ?>" /></a></div>
 <?php
-	
+		
 		echo "</div>";
 	
 		include_once(WPSCP_PLUGIN_PATH."includes/wpscp-sidebar.php");

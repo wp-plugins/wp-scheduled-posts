@@ -1,14 +1,14 @@
-<div style="float:right; width:200px; min-height:400px; margin-top:50px;">
-<div style="width:250px; position:absolute; margin-left:-260px;"><a target="_blank" href="http://wpdeveloper.net"><img src="<?php echo WPSCP_PLUGIN_URL."/includes/wpdevlogo.png" ?>" /></a></div>
+<div style="float:right; width:300px; min-height:400px; margin-top:50px;">
 <table class="widefat">
 	<thead>
-		<tr><th>Links<th></tr>
+		<tr><th>WPDeveloper.net Links<th></tr>
 	</thead>
 	<tbody>
 		<td>
 		<ul>
-		<li><a href="http://wpdeveloper.net/support" target="_blank">Support Link</a></li>
-		<li><a href="http://wpdeveloper.net/support" target="_blank">Support Forums</a></li>
+		<li><a href="http://wpdeveloper.net" target="_blank">Home</a></li>
+        <li><a href="http://wpdeveloper.net/support" target="_blank">Support Link</a></li>
+		<!--<li><a href="http://wpdeveloper.net/support" target="_blank">Support Forums</a></li>-->
 		<li><a href="http://wpdeveloper.net/plugin/wp-author-report" target="_blank">WP Author Report</a></li>
 		<li><a href="http://wpdeveloper.net/affiliate" target="_blank">Become an Affiliate</a></li>
 		</ul>	

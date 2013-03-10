@@ -8,7 +8,7 @@ if(!function_exists('wpdev_dashboard_widget_function')) #prevent the collision o
 	
 	function wpdev_dashboard_widget_function() {
 		// Display whatever it is you want to show
-		echo '<h4>Keep Your Eyes Regularly at <a href="http://wpdeveloper.net" target="_blank">WPdeveloper.net</a></h4>'; 
+		 
 			// Get a SimplePie feed object from the specified feed source.
 			$rss = fetch_feed('http://wpdeveloper.net/feed');
 			if (!is_wp_error( $rss ) ) : // Checks that the object is created correctly 
@@ -33,7 +33,8 @@ if(!function_exists('wpdev_dashboard_widget_function')) #prevent the collision o
 					<?php endforeach; ?>
 				</ul>
 	
-	<?php		
+	<?php	
+	echo '<h4>Keep Your Eyes at <a href="http://wpdeveloper.net" target="_blank">WPdeveloper.net</a></h4>';	
 	} # END OF wp_author_report_dashboard_widget_function()
 }#end if(!function_exists('wpdev_dashboar...
 // Create the function use in the action hook
