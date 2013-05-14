@@ -4,7 +4,7 @@ Donate link: http://wordpressfoundation.org/donate/
 Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget
 Requires at least: 2.5.0
 Tested up to: 3.5.2
-Stable tag: 1.0.1
+Stable tag: 1.1.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -62,7 +62,8 @@ Use plugin support button in WordPress.org extended listing.
 
 
 == Changelog ==
-
+= 1.1.0 =
+* New feature: Ability to publish a post immediately but with a future date
 = 1.0.1 =
 * Basic Bug fix
 
@@ -72,6 +73,8 @@ Use plugin support button in WordPress.org extended listing.
 
 
 == Upgrade Notice ==
+= 1.1.0 =
+# New feature: Ability to publish a post immediately but with a future date
 
 = 1.0.1 =
 # Basic Bug fix

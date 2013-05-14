@@ -7,7 +7,8 @@ function wpscp_get_options()
 			'show_in_front_end_adminbar'=>1, 
 			'show_in_adminbar'=>1,
 			'allow_user_role'=>array('administrator'),
-			'allow_post_types'=>array('post')  
+			'allow_post_types'=>array('post'),
+			'prevent_future_post'=>0  
 	
 	);
 return get_option('wpscp_options',$options);
@@ -59,8 +60,9 @@ function wpscp_options_page()
 				'show_in_front_end_adminbar'=>intval($_POST['show_in_front_end_adminbar']), 
 				'show_in_adminbar'=>intval($_POST['show_in_adminbar']),
 				'allow_user_role'=>$_POST['allow_user_role'],
-				'allow_post_types'=>$_POST['allow_post_types']  
-		
+				'allow_post_types'=>$_POST['allow_post_types'],
+				'prevent_future_post'=>$_POST['prevent_future_post'] 
+				
 		);	
 	update_option('wpscp_options',$options);
 	$wpscp_options=$options;
@@ -105,7 +107,9 @@ function wpscp_options_page()
             <td>
             <select name="allow_user_role[]" id="allow_user_role" multiple="multiple"  style="height:100px;width:150px;" ><?php  wpscp_dropdown_roles( $wpscp_options['allow_user_role'] ); ?></select>
             </td>
-            </tr>  
+            </tr>
+            
+            <tr><td  colspan="2" align="left"><input type="checkbox" name="prevent_future_post" value="1" <?php echo ($wpscp_options['prevent_future_post'])?' checked="checked"': '';?> />&nbsp;&nbsp;Show Option to Publish Post Immediately but with Future Date <span style="color:#666666"> (Two option buttons will be appeared above the publish button in the post edit panel)</span> </td></tr>  
                         
             <tr><td><input type="submit" name="save_options" value="Save Options" class='button-primary'/></td><td>&nbsp;</td></tr>
             </table>

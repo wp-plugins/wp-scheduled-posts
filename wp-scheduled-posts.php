@@ -3,7 +3,7 @@
  * Plugin Name: WP Scheduled Posts
  * Plugin URI: http://wpdeveloper.net/free-plugin/wp-scheduled-posts/
  * Description: A complete solution for WordPress Scheduled Post. Get an admin Bar & Dashboard Widget showing all your scheduled post.
- * Version: 1.0.1
+ * Version: 1.1.0
  * Author: WPDeveloper.net
  * Author URI: http://wpdeveloper.net
  * License: GPL2+
@@ -116,4 +116,54 @@ function wp_scheduled_posts()
 	}
 	
 }#end wp_scheduled_posts()
+
+#------------------------------------------Publish Post Immediately but with a future date -------------------------------------------------------------
+
+
+
+function wpscp_prevent_future_type( $post_data ) {
+if(isset($_POST['prevent_future_post']) && $_POST['prevent_future_post']=='yes')
+{
+	
+	if ( $post_data['post_status'] == 'future')
+	{
+	$post_data['post_status'] = 'publish';
+	remove_action('future_post', '_future_post_hook');
+	}
+}
+return $post_data;
+}
+
+function wpscp_post_page_prevent_future_option($postid)
+{
+global $post;
+
+$post_gmt_timestamp=strtotime($post->post_date_gmt);
+$current_gmt_timestamp = current_time('timestamp', $gmt = 1);#http://codex.wordpress.org/Function_Reference/current_time
+?>
+<div style="padding-left:10px;">
+Publish post with future date : 
+<input type="radio" name="prevent_future_post" value="no" id="prevent_future_post_no" /><label for="prevent_future_post_no"> No</label> 
+<input type="radio" name="prevent_future_post" value="yes" id="prevent_future_post_yes" <?php echo ($post_gmt_timestamp>$current_gmt_timestamp && $post->post_status!='future')?' checked="checked"':'';?>  /><label for="prevent_future_post_yes"> Yes</label>
+</div>
+<?php
+}
+
+
+function wpscp_initialize()
+{
+$wpscp_options=wpscp_get_options();
+	if($wpscp_options['prevent_future_post']==1)
+	{
+		add_filter('wp_insert_post_data', 'wpscp_prevent_future_type');
+		#show an option in post edit page
+		
+		
+		add_action('post_submitbox_misc_actions', 'wpscp_post_page_prevent_future_option');
+	}#end if($wpscp_options['...
+}
+
+
+add_action('init', 'wpscp_initialize');
+
 ?>
