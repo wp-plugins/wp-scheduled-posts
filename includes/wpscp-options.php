@@ -8,8 +8,10 @@ function wpscp_get_options()
 			'show_in_adminbar'=>1,
 			'allow_user_role'=>array('administrator'),
 			'allow_post_types'=>array('post'),
-			'prevent_future_post'=>0  
-	
+			'adminbar_item_template'=>"<strong>%TITLE%...</strong> by %AUTHOR% for %DATE%",
+			'adminbar_title_length'=>45,
+			'adminbar_date_format'=>'M-d h:i:a',
+			'prevent_future_post'=>0,
 	);
 return get_option('wpscp_options',$options);
 }
@@ -61,20 +63,23 @@ function wpscp_options_page()
 				'show_in_adminbar'=>intval($_POST['show_in_adminbar']),
 				'allow_user_role'=>$_POST['allow_user_role'],
 				'allow_post_types'=>$_POST['allow_post_types'],
-				'prevent_future_post'=>$_POST['prevent_future_post'] 
-				
+				'adminbar_item_template'=>trim($_POST['adminbar_item_template']), 
+				'adminbar_title_length'=>$_POST['adminbar_title_length'], 
+				'adminbar_date_format'=>trim($_POST['adminbar_date_format']), 
+				'prevent_future_post'=>$_POST['prevent_future_post']
 		);	
 	update_option('wpscp_options',$options);
 	$wpscp_options=$options;
 	}#end if(isset($_POST['save_options']))
-	
-	
-	echo "<div style=\"width: 1010px; padding-left: 10px;\" class=\"wrap\">";
-		echo "<div style=\"width: 700px; float:left;\">";
-		echo '<div id="icon-options-general" class="icon32"></div>';
-		echo "<h2>WP Scheduled Posts Options</h2>";
-		global $current_user;
-		?>
+	?>
+	<div style="width: 1010px; padding-left: 10px;" class="wrap">
+		<div id="icon-options-general" class="icon32"></div><h2>WP Scheduled Posts Options</h2>
+        
+		<div style="text-align:right; margin-right:300px;">
+        	By <a class='button-primary' href="http://wpdeveloper.net" target="_blank">WPDeveloper</a>  <a class='button-primary' href="http://wpdeveloper.net/free-plugin/wp-scheduled-posts/" target="_blank">Visit Plugin Site</a>  <a  class='button-primary' style="color:#FFF600;" href="http://wordpress.org/support/view/plugin-reviews/wp-scheduled-posts" target="_blank">Rate This Plugin</a>
+        </div>        
+		
+		<div style="width: 700px; float:left;">
 			<form action="" method="post">
             <table class="form-table">
             <tr><td  colspan="2" align="left"><input type="checkbox" name="show_dashboard_widget" value="1" <?php echo ($wpscp_options['show_dashboard_widget'])?' checked="checked"': '';?> />&nbsp;&nbsp;Show Scheduled Posts in Dashboard Widget</td></tr>
@@ -108,9 +113,20 @@ function wpscp_options_page()
             <select name="allow_user_role[]" id="allow_user_role" multiple="multiple"  style="height:100px;width:150px;" ><?php  wpscp_dropdown_roles( $wpscp_options['allow_user_role'] ); ?></select>
             </td>
             </tr>
-            
-            <tr><td  colspan="2" align="left"><input type="checkbox" name="prevent_future_post" value="1" <?php echo ($wpscp_options['prevent_future_post'])?' checked="checked"': '';?> />&nbsp;&nbsp;Show Option to Publish Post Immediately but with Future Date <span style="color:#666666"> (Two option buttons will be appeared above the publish button in the post edit panel)</span> </td></tr>  
-                        
+            <tr><td  colspan="2" align="left">
+            	<div style="border:1px solid #eeeeee; padding:5px;">
+                	<strong>Custom item template for scheduled posts list in adminbar:</strong><br />
+                    Item template: <input type="text" name="adminbar_item_template" size="50" placeholder="<strong>%TITLE%...</strong> by %AUTHOR% for %DATE%"  value="<?php echo htmlspecialchars(stripslashes($wpscp_options['adminbar_item_template'])) ?>"  /> 
+                    Title length: <input type="text" name="adminbar_title_length" size="5" placeholder="45"  value="<?php echo $wpscp_options['adminbar_title_length'] ?>" /> 
+                    Date format: <input type="text" name="adminbar_date_format" size="10" placeholder="M-d h:i:a"  value="<?php echo htmlspecialchars(stripslashes($wpscp_options['adminbar_date_format'])) ?>" />
+                	<div style="padding-left:80px; color:#999999;">For item template use <strong>%TITLE%</strong> for post title, <strong>%AUTHOR%</strong> for post author and <strong>%DATE%</strong> for post scheduled date-time. You can use HTML tags with styles also </div>
+                </div>
+            </td></tr>
+            <tr><td  colspan="2" align="left">
+            <div style="border:1px solid #FFEBE8; background:#FEFFE8; padding:5px;">
+            <input type="checkbox" name="prevent_future_post" value="1" <?php echo ($wpscp_options['prevent_future_post'])?' checked="checked"': '';?> />&nbsp;&nbsp;Show option to publish post immediately but with future date-time <span style="color:#666666"> (A checkbox will be appeared in date-time edit section in the post edit panel)</span> 
+            </div>    
+            </td></tr>  
             <tr><td><input type="submit" name="save_options" value="Save Options" class='button-primary'/></td><td>&nbsp;</td></tr>
             </table>
             </form>
