@@ -4,7 +4,7 @@ Donate link: http://wordpressfoundation.org/donate/
 Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget
 Requires at least: 2.5.0
 Tested up to: 3.5.2
-Stable tag: 1.2.0
+Stable tag: 1.2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -64,6 +64,9 @@ Use plugin support button in WordPress.org extended listing.
 
 
 == Changelog ==
+= 1.2.1 =
+* Bug fix: Admin bar menu was showing only one scheduled post
+
 = 1.2.0 =
 * New feature: Custom item template and style for scheduled posts list in adminbar.
 * Settings page link added in plugins list page.
@@ -80,6 +83,9 @@ Use plugin support button in WordPress.org extended listing.
 
 
 == Upgrade Notice ==
+= 1.2.1 =
+# Bug fix: Admin bar menu was showing only one scheduled post
+
 = 1.2.0 =
 # New feature: Custom item template and style for scheduled posts list in adminbar.
 # Settings page link added in plugins list page.

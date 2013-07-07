@@ -3,7 +3,7 @@
  * Plugin Name: WP Scheduled Posts
  * Plugin URI: http://wpdeveloper.net/free-plugin/wp-scheduled-posts/
  * Description: A complete solution for WordPress Scheduled Post. Get an admin Bar & Dashboard Widget showing all your scheduled post.
- * Version: 1.2.0
+ * Version: 1.2.1
  * Author: WPDeveloper.net
  * Author URI: http://wpdeveloper.net
  * License: GPL2+
@@ -90,18 +90,18 @@ add_action( 'admin_bar_menu', 'wp_scheduled_post_menu', 1000 );
 					$list_template=stripslashes($list_template);
 					$title_length=intval($wpscp_options['adminbar_title_length']); if($title_length==0){$title_length=45;}
 					$date_format=$wpscp_options['adminbar_date_format']; if($date_format==''){$date_format='M-d h:i:a';}
-					
+
 					foreach($result as $scpost)
-					{
+					{ 
 					$title=substr($scpost->post_title, 0,$title_length);
 					$author=get_the_author_meta( 'user_nicename', $scpost->post_author );
 					$date=get_date_from_gmt($scpost->post_date_gmt, $format = $date_format);
 					
-					$list_template=str_replace("%TITLE%", $title ,$list_template);
-					$list_template=str_replace("%AUTHOR%", $author ,$list_template);
-					$list_template=str_replace("%DATE%", $date ,$list_template);
+					$list_item_template=str_replace("%TITLE%", $title ,$list_template);
+					$list_item_template=str_replace("%AUTHOR%", $author ,$list_item_template);
+					$list_item_template=str_replace("%DATE%", $date ,$list_item_template);
 					
-					$wp_admin_bar->add_menu( array( 'parent' => 'wpscp' , 'title' =>$list_template , 'href' =>get_edit_post_link($scpost->ID),'meta'=>array('title'=>$scpost->post_title) ) );
+					$wp_admin_bar->add_menu( array( 'parent' => 'wpscp' , 'title' =>$list_item_template , 'href' =>get_edit_post_link($scpost->ID),'meta'=>array('title'=>$scpost->post_title) ) );
 					}
 				}
 		  }
