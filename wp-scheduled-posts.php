@@ -9,7 +9,7 @@
  * License: GPL2+
  * Text Domain: wp-scheduled-posts
  * Min WP Version: 2.5.0
- * Max WP Version: 3.5.2
+ * Max WP Version: 3.9.0
  */
 
 
