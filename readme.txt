@@ -3,8 +3,8 @@ Contributors: onetarek, Asif2BD
 Donate link: http://wordpressfoundation.org/donate/
 Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget
 Requires at least: 2.5.0
-Tested up to: 4.0
-Stable tag: 1.3.0
+Tested up to: 4.1
+Stable tag: 1.3.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -75,6 +75,9 @@ Contact at WPDeveloper.net [Support Page](http://wpdeveloper.net/support)
 
 
 == Changelog ==
+
+= 1.3.1 - 2014-12-27 =
+* **Minor** Compatible with WordPress 4.1.
 
 = 1.3.0 - 2014-6-1 =
 * **New** Brand new interface.

@@ -3,13 +3,13 @@
  * Plugin Name: WP Scheduled Posts
  * Plugin URI: http://wpdeveloper.net/free-plugin/wp-scheduled-posts/
  * Description: A complete solution for WordPress Post Schedule. Get an admin Bar & Dashboard Widget showing all your scheduled posts. And full control.
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: WPDeveloper.net
  * Author URI: http://wpdeveloper.net
  * License: GPL2+
  * Text Domain: wp-scheduled-posts
  * Min WP Version: 2.5.0
- * Max WP Version: 3.9.1
+ * Max WP Version: 4.1
  */
 
 
