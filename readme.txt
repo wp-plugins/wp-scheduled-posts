@@ -1,10 +1,10 @@
 === WP Scheduled Posts ===
-Contributors: onetarek, Asif2BD
-Donate link: http://wordpressfoundation.org/donate/
-Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget
+Contributors: Asif2BD, onetarek
+Donate link: http://wpdeveloper.net/
+Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget, scheduled posts, missed scheduled
 Requires at least: 2.5.0
-Tested up to: 4.1
-Stable tag: 1.3.1
+Tested up to: 4.2
+Stable tag: 1.3.2
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ A complete solution for WordPress Post Schedule. Get an admin Bar & Dashboard Wi
 
 == Description ==
 
-[WPDeveloper.net](http://wpdeveloper.net/) brings 'WP Scheduled Posts' for all WordPress user for free, which was previously only used by [ARCom](http://arcom.com.bd) internally, in multi-author projects like [The Tech Journal](http://thetechjournal.com).
+[WPDeveloper.net](http://wpdeveloper.net/) brings '[WP Scheduled Posts](http://wpdeveloper.net/free-plugin/wp-scheduled-posts/)' for all WordPress user for free, which was previously only used by [ARCom](http://arcom.com.bd) internally, in multi-author projects like [The Tech Journal](http://thetechjournal.com).
 
 'WP Scheduled Posts' is a very simple but super useful plugin. It will enable a widget in dashboard and/or in admin bar which will show all future Scheduled post. This is specially useful for multi-author blog. Even its useful for single author blog who use the built-in Schedule function of WordPress. 
 
@@ -32,6 +32,13 @@ To better understand what it does and how it works please check screenshot secti
 * **New** Ability to control which 'Category' will be available to "Scheduled Posts".
 * **New** Ability to control date time structure, as you need.
 
+
+**Check Our Other Plugins:**
+
+* **[Twitter Cards Meta](https://wordpress.org/plugins/twitter-cards-meta/)** 
+* **[Facebook Secret Meta](https://wordpress.org/plugins/facebook-secret-meta/)** 
+* **[WP Author Report Free](https://wordpress.org/plugins/wp-author-report-free/)** 
+* **[Analytify - Ultimate Google Analytics Dashboard](https://wordpress.org/plugins/wp-analytify/)**
 
 
 == Installation ==
@@ -76,6 +83,10 @@ Contact at WPDeveloper.net [Support Page](http://wpdeveloper.net/support)
 
 == Changelog ==
 
+= 1.3.2 - 2015-03-02 =
+* **Minor** bug fix.
+* Compatible to WordPress 4.2 Beta
+
 = 1.3.1 - 2014-12-27 =
 * **Minor** Compatible with WordPress 4.1.
 
@@ -104,12 +115,12 @@ Contact at WPDeveloper.net [Support Page](http://wpdeveloper.net/support)
 
 
 == Upgrade Notice ==
-= 1.3.0 =
-* New interface, ability to control custom post type, category, date structure, User level.
+= 1.3.2 =
+* Bug fix, new offer, compatible to WordPress 4.2 beta! Must update.
 
 
 == Donation ==
 
-You may donate to WordPress Foundation.
+Consider buying any of our Pro version at little cost.
 
-http://wordpressfoundation.org/donate/
+http://wpdeveloper.net/
