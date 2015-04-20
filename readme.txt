@@ -1,14 +1,14 @@
 === WP Scheduled Posts ===
 Contributors: Asif2BD, onetarek
 Donate link: http://wpdeveloper.net/
-Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget, scheduled posts, missed scheduled
+Tags: schedule, post schedule, schedule widget, scheduler, schedule bar, schedule menu bar, admin bar, dashboard widget, scheduled posts, missed scheduled, editor calendar, calendar
 Requires at least: 2.5.0
 Tested up to: 4.2
-Stable tag: 1.3.2
+Stable tag: 1.3.3
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-A complete solution for WordPress Post Schedule. Get an admin Bar & Dashboard Widget showing all your scheduled posts. And full control.
+A complete solution for WordPress Post Schedule. Get an Admin Bar & Dashboard Widget showing all your scheduled posts. And full control.
 
 == Description ==
 
@@ -83,6 +83,10 @@ Contact at WPDeveloper.net [Support Page](http://wpdeveloper.net/support)
 
 == Changelog ==
 
+= 1.3.3 - 2015-04-20 =
+* Security Check!
+* Compatible to WordPress 4.2 RC.
+
 = 1.3.2 - 2015-03-02 =
 * **Minor** bug fix.
 * Compatible to WordPress 4.2 Beta
@@ -115,8 +119,8 @@ Contact at WPDeveloper.net [Support Page](http://wpdeveloper.net/support)
 
 
 == Upgrade Notice ==
-= 1.3.2 =
-* Bug fix, new offer, compatible to WordPress 4.2 beta! Must update.
+= 1.3.3 =
+* Security check, compatible to WordPress 4.2 RC! User survey for more coming feature. Must update.
 
 
 == Donation ==
