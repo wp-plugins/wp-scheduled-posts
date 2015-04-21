@@ -239,7 +239,7 @@ if ( current_user_can( 'install_plugins' ) )
         /* Check that the user hasn't already clicked to ignore the message */
      if ( ! get_user_meta($user_id, 'wpscp_ignore_notice133') ) {
         echo '<div class="updated"><p>';
-        printf(__('Wow! You love <b><a href="http://wpdeveloper.net/go/wpsp-free" target="_blank">WP Scheduled Posts</a>! </b>Consider <strong><a href="http://wpdeveloper.net/go/wpsp-rating" target="_blank">Rating</a></strong> us. We are considering to bring more features, <a href="http://goo.gl/forms/FNdggyrUwP" target="_blank">tell us</a> what you need. <strong><a href="http://goo.gl/forms/FNdggyrUwP" target="_blank">Click here</a>!</strong> | <a href="%1$s">[Hide Notice]</a>'), '?wpscp_nag_ignore=0');
+        printf(__('Wow! You love <b><a href="http://wpdeveloper.net/go/wpsp-free" target="_blank">WP Scheduled Posts</a>! </b>Consider <strong><a href="http://wpdeveloper.net/go/wpsp-rating" target="_blank">Rating</a></strong> us. We are considering to bring more features, <a href="http://wpdeveloper.net/go/WPSP-PDS" target="_blank">tell us</a> what you need. <strong><a href="http://wpdeveloper.net/go/WPSP-PDS" target="_blank">Click here</a>!</strong> | <a href="%1$s">[Hide Notice]</a>'),  admin_url( 'admin.php?page=wp-scheduled-posts&twcm_nag_ignore=0' ));
         echo "</p></div>";
      }
     }

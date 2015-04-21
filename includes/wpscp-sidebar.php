@@ -1,6 +1,7 @@
 <div  class="wpscp-sidebar">
 <a class='wpscp-button2' style="margin-bottom:3px; display:block;" href="http://wpdeveloper.net/free-plugin/wp-scheduled-posts/" target="_blank">Plugin Homepage &rarr;</a>
 <a  class='wpscp-button3'  style="margin-bottom:3px; display:block;" href="http://wordpress.org/support/view/plugin-reviews/wp-scheduled-posts" target="_blank">&hearts; &nbsp; Rate This Plugin</a>
+<a class='wpscp-button2' style="margin-bottom:3px; display:block;" href="http://wpdeveloper.net/go/WPSP-PDS" target="_blank">Vote For Feature!!</a>
 <table class="widefat">
 	<thead>
 		<tr><th>Developed By WPDeveloper.net<th></tr>
